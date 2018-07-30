@@ -1,0 +1,61 @@
+.loading { position: fixed; left: 0px; top: 0px; z-index: 99999; width: 100%; height: 100%; overflow: visible; background: #333 url("../images/loading.gif") no-repeat center center; }
+
+.add-meau { background-color: rgba(28, 61, 107, 0.8); box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important; }
+
+ul.mb { top: 50%; position: relative; transform: translateY(-50%); }
+
+main { width: 100%; height: 52px; position: fixed; z-index: 999; top: 0px; color: #fff; background-color: #40a2dc00; }
+@media (max-width: 1200px) { main { background-color: rgba(255, 255, 255, 0); height: 55px; } }
+
+.three-line { display: none; }
+@media (max-width: 1200px) { .three-line { display: block; } }
+
+menu input[type=checkbox] { display: none; }
+menu input[type=checkbox]:checked ~ hamburger > i { background-color: transparent; transform: rotate(90deg); }
+menu input[type=checkbox]:checked ~ hamburger > i:before { transform: translate(-50%, -50%) rotate(315deg); background-color: #000; }
+menu input[type=checkbox]:checked ~ hamburger > i:after { transform: translate(-50%, -50%) rotate(-315deg); background-color: #000; }
+
+menu input[type=checkbox]:checked ~ hamburger close { color: white; width: 100%; }
+
+menu input[type=checkbox]:checked ~ hamburger open { color: transparent; width: 0; }
+
+menu hamburger { position: absolute; display: block; height: 25px; width: 41px; z-index: 1; left: 20px; top: 15px; }
+menu hamburger:hover { cursor: pointer; }
+
+menu hamburger text close, menu hamburger text open { text-transform: uppercase; font-size: .8em; bottom: 35px; position: absolute; transform: translateY(50px); text-align: center; overflow: hidden; transition: width .25s .35s, color .45s .35s; }
+
+menu hamburger text close { color: white; right: 0px; width: 0px; margin-bottom: 45%; margin-right: -110%; }
+
+menu hamburger text open { color: white; width: 100%; margin-left: 110%; margin-bottom: 47%; }
+
+menu hamburger > i { position: absolute; width: 30px; height: 2px; top: 50%; background-color: #fff; pointer-events: auto; transition-duration: .35s; transition-delay: .35s; }
+
+menu hamburger > i:before, menu hamburger > i:after { position: absolute; display: block; width: 100%; height: 2px; left: 50%; background: #fff; content: ""; transition: transform 0.35s; transform-origin: 50% 50%; }
+
+menu hamburger > i:before { transform: translate(-50%, -9px); }
+
+menu hamburger > i:after { transform: translate(-50%, 9px); }
+
+/* reset */
+* { margin: 0; padding: 0; }
+
+label { cursor: pointer; }
+label:hover { outline: none; }
+
+.menu { position: fixed; top: 0px; left: 0px; background: rgba(255, 255, 255, 0.8); width: 100%; height: 100%; transform: translate3d(0, -100%, 0); transition: transform 0.35s; z-index: 1; }
+
+.menu ul li a, .menu ul li label { display: block; margin: auto; text-align: center; padding: 0 20px; line-height: 45px; text-decoration: none; color: #1b66ac; font-weight: bold; font-size: 20px; letter-spacing: 3px; }
+
+.menu ul li a:hover, .menu ul li label:hover { color: #39a0ff; }
+
+.menu-checkbox { display: none; }
+.menu-checkbox:checked + .menu { transform: translate3d(0, 0, 0); }
+
+.pc { display: flex; float: right; width: 1000px; padding: 15px 0px; }
+
+.hastag { padding: 0px 20px; cursor: pointer; font-size: 1rem; letter-spacing: 2px; font-weight: bold; }
+
+.underline { display: block; }
+@media (max-width: 1200px) { .underline { display: none; } }
+
+/*# sourceMappingURL=nav.css.map */
